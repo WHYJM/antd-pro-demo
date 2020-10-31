@@ -49,6 +49,12 @@ export default defineConfig({
       component: './Welcome',
     },
     {
+      path: '/bank',
+      name: 'bank',
+      icon: 'smile',
+      component: './Test',
+    },
+    {
       path: '/admin',
       name: 'admin',
       icon: 'crown',
