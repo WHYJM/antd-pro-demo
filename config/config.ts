@@ -12,7 +12,7 @@ export default defineConfig({
     hmr: true,
   },
   layout: {
-    name: 'Ant Design Pro',
+    name: 'Hong Kong Bank Open API',
     locale: true,
     ...defaultSettings,
   },
@@ -52,7 +52,7 @@ export default defineConfig({
       path: '/bank',
       name: 'bank',
       icon: 'smile',
-      component: './Test',
+      component: './BankProductsCompare/BankProductsCompare',
     },
     {
       path: '/admin',

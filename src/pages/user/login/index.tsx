@@ -1,14 +1,14 @@
-import { AlipayCircleOutlined, TaobaoCircleOutlined, WeiboCircleOutlined } from '@ant-design/icons';
+// import { AlipayCircleOutlined, TaobaoCircleOutlined, WeiboCircleOutlined } from '@ant-design/icons';
 import { Alert, Checkbox, message } from 'antd';
 import React, { useState } from 'react';
 import { Link, SelectLang, history } from 'umi';
 import logo from '@/assets/logo.svg';
 import { LoginParamsType, fakeAccountLogin } from '@/services/login';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Footer';
 import LoginFrom from './components/Login';
 import styles from './style.less';
 
-const { Tab, Username, Password, Mobile, Captcha, Submit } = LoginFrom;
+const { Tab, Username, Password, Submit } = LoginFrom;
 
 const LoginMessage: React.FC<{
   content: string;
@@ -101,7 +101,7 @@ const Login: React.FC<{}> = () => {
                 ]}
               />
             </Tab>
-            <Tab key="mobile" tab="手机号登录">
+            {/* <Tab key="mobile" tab="手机号登录">
               {status === 'error' && loginType === 'mobile' && !submitting && (
                 <LoginMessage content="验证码错误" />
               )}
@@ -132,21 +132,21 @@ const Login: React.FC<{}> = () => {
                   },
                 ]}
               />
-            </Tab>
+            </Tab> */}
             <div>
               <Checkbox checked={autoLogin} onChange={(e) => setAutoLogin(e.target.checked)}>
                 自动登录
               </Checkbox>
-              <a
+              {/* <a
                 style={{
                   float: 'right',
                 }}
               >
                 忘记密码
-              </a>
+              </a> */}
             </div>
             <Submit loading={submitting}>登录</Submit>
-            <div className={styles.other}>
+            {/* <div className={styles.other}>
               其他登录方式
               <AlipayCircleOutlined className={styles.icon} />
               <TaobaoCircleOutlined className={styles.icon} />
@@ -154,11 +154,11 @@ const Login: React.FC<{}> = () => {
               <Link className={styles.register} to="/user/register">
                 注册账户
               </Link>
-            </div>
+            </div> */}
           </LoginFrom>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

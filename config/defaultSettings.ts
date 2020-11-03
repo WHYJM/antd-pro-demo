@@ -12,9 +12,9 @@ export default {
   menu: {
     locale: true,
   },
-  title: 'Ant Design Pro',
+  title: 'Hong Kong Bank Open API',
   pwa: false,
-  logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+  logo: 'https://t4.ftcdn.net/jpg/01/33/33/07/240_F_133330728_m5Cmn2SwYzCNqrb92x8ucFjvs3cbLkQx.jpg',
   iconfontUrl: '',
 } as LayoutSettings & {
   pwa: boolean;

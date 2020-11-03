@@ -12,11 +12,16 @@ export default {
       changeOrigin: true,
       pathRewrite: { '^': '' },
     },
-    '/hsbc/' :{
+    '/hsbc/': {
       target: 'https://api.hsbc.com.hk/live/open-banking/v1.0/',
       changeOrigin: true,
       pathRewrite: { '^/hsbc': '' },
-    }
+    },
+    '/hengsheng/': {
+      target: 'https://developer.hangseng.com/sandbox/open-banking/v1.0/',
+      changeOrigin: true,
+      pathRewrite: { '^/hengsheng': '' },
+    },
   },
   test: {
     '/api/': {
