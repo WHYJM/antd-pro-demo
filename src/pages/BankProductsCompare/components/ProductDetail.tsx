@@ -4,6 +4,7 @@ import ReactJson from 'react-json-view';
 import { useRequest } from 'umi';
 import hsbcApi from '@/services/hsbc';
 import hengshengApi from '@/services/hengsheng';
+import HsbcProductDetail from '@/pages/BankProductsCompare/components/HsbcProductDetail';
 
 export interface ProductProps {
   type?: string;
@@ -36,6 +37,7 @@ const BankProductsCompare: React.FC<ProductProps> = (props: any) => {
 
   return (
     <>
+      <HsbcProductDetail data={data} />
       <ReactJson src={data} enableClipboard={false} displayDataTypes={false} />
     </>
   );
