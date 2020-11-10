@@ -1,6 +1,8 @@
 import React from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
-import { Card, Alert, Typography } from 'antd';
+import { history } from 'umi';
+import { Card, Alert, Typography, Button } from 'antd';
+import { PoweroffOutlined } from '@ant-design/icons';
 import styles from './Welcome.less';
 
 const CodePreview: React.FC<{}> = ({ children }) => (
@@ -10,6 +12,10 @@ const CodePreview: React.FC<{}> = ({ children }) => (
     </code>
   </pre>
 );
+
+function onclick() {
+  history.push('/bank');
+}
 
 export default (): React.ReactNode => (
   <PageContainer>
@@ -43,6 +49,9 @@ export default (): React.ReactNode => (
         </a>
       </Typography.Text>
       <CodePreview>yarn add @ant-design/pro-layout</CodePreview>
+      <Button type="primary" icon={<PoweroffOutlined />} onClick={onclick}>
+        Go to Bank!
+      </Button>
     </Card>
   </PageContainer>
 );
