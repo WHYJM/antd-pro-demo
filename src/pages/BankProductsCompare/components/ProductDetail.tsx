@@ -27,7 +27,7 @@ const BankProductsCompare: React.FC<ProductProps> = (props: any) => {
     },
     {
       formatResult: (res) => {
-        return res.data[0];
+        return res.data[0].Brand;
       },
     },
   );
@@ -35,9 +35,19 @@ const BankProductsCompare: React.FC<ProductProps> = (props: any) => {
     return <>Loading...</>;
   }
 
+  function renderingFn() {
+    switch (props.type) {
+      case 'hsbc,allInOne':
+        return <HsbcProductDetail />;
+      default:
+        return <HsbcProductDetail />;
+    }
+  }
+
   return (
     <>
-      <HsbcProductDetail data={data} />
+      {/* <HsbcProductDetail data={data} /> */}
+      {renderingFn()}
       <ReactJson src={data} enableClipboard={false} displayDataTypes={false} />
     </>
   );

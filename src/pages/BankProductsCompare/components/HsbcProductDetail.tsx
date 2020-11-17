@@ -8,14 +8,10 @@ interface ProductProps {
 const HsbcProductDetail: React.FC<ProductProps> = (props: any) => {
   console.log(props.data);
 
-  const borderStyle = {
-    borderColor: 'black',
-  };
-
   return (
     <>
       <Card>
-        <Descriptions title="User Info" bordered style={borderStyle}>
+        <Descriptions title="User Info" bordered>
           <Descriptions.Item label="Product">Cloud Database</Descriptions.Item>
           <Descriptions.Item label="Billing Mode">Prepaid</Descriptions.Item>
           <Descriptions.Item label="Automatic Renewal">YES</Descriptions.Item>
