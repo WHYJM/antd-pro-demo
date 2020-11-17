@@ -5,9 +5,7 @@ interface ProductProps {
   data?: any;
 }
 
-const HsbcProductDetail: React.FC<ProductProps> = (props: any) => {
-  console.log(props.data);
-
+const HsbcProductDetail: React.FC<ProductProps> = () => {
   const borderStyle = {
     borderColor: 'black',
   };

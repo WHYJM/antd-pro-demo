@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
 import { history } from 'umi';
 import { Card, Alert, Typography, Button } from 'antd';
 import { PoweroffOutlined } from '@ant-design/icons';
+import HsbcProductDetail from '@/pages/BankProductsCompare/components/HsbcProductDetail';
 import styles from './Welcome.less';
 
 const CodePreview: React.FC<{}> = ({ children }) => (
@@ -12,6 +13,20 @@ const CodePreview: React.FC<{}> = ({ children }) => (
     </code>
   </pre>
 );
+
+const ComponentPreview: React.FC = () => {
+  const [currentProduct, setCurrentProduct] = useState(<CodePreview>1</CodePreview>);
+
+  return (
+    <Card>
+      <p> some testing here</p>
+      <Button onClick={() => setCurrentProduct(<CodePreview>1</CodePreview>)}>btn1</Button>
+      <Button onClick={() => setCurrentProduct(<CodePreview>2</CodePreview>)}>btn2</Button>
+      <Button onClick={() => setCurrentProduct(<HsbcProductDetail />)}>btn3</Button>
+      {currentProduct}
+    </Card>
+  );
+};
 
 function onclick() {
   history.push('/bank');
@@ -53,5 +68,6 @@ export default (): React.ReactNode => (
         Go to Bank!
       </Button>
     </Card>
+    <ComponentPreview />
   </PageContainer>
 );
